@@ -12,3 +12,13 @@
  =============================================================================
  This file is responsible for all styles on the johannesreuter app.
  --------------------------------------------------------------------------------------------------------------------- */
+
+.portrait {
+    display: inline-block;
+    margin: 20px 0;
+    border-radius: 999px;
+}
+
+#about {
+    margin-bottom: 250px;
+}
