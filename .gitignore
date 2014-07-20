@@ -166,6 +166,7 @@ pip-log.txt
 
 temp
 node_modules
+bower_components
 js/components
 less/*.css
 sass/*.css
