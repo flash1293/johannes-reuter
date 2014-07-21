@@ -109,14 +109,47 @@
         </section>
 
         <section id="projects" class="content-section text-center">
-            <div class="download-section">
-                <div class="container">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <h2>Download Grayscale</h2>
-                        <p>You can download Grayscale for free on the download page at Start Bootstrap. You can also get the source code directly from GitHub if you prefer. Additionally, Grayscale is the first Start Bootstrap theme to come with a LESS file for easy color customization!</p>
-                        <a href="http://startbootstrap.com/grayscale" class="btn btn-default btn-lg">Visit Download Page</a>
+            <h2>Projekte</h2>
+            <div id="carousel-projects" class="carousel slide projects-carousel" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-projects" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-projects" data-slide-to="1"></li>
+                    <li data-target="#carousel-projects" data-slide-to="2"></li>
+                    <li data-target="#carousel-projects" data-slide-to="3"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active" style="background-image: url(img/projects/airde.png)">
+                        <div class="carousel-caption">
+                            air.de
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(img/projects/scrumteam.png)">
+                        <div class="carousel-caption">
+                            das Scrum-Team
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(img/projects/seminaut.png)">
+                        <div class="carousel-caption">
+                            Seminaut
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(img/projects/mietwagen.png)">
+                        <div class="carousel-caption">
+                            Urlaubswerk Mietwagen-Integration
+                        </div>
                     </div>
                 </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-projects" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-projects" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
             </div>
         </section>
 
