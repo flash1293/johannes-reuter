@@ -132,12 +132,12 @@
 }
 
 @media(min-width:500px) {
-   .projects-carousel .carousel-caption:hover .carousel-caption-details {
+   .projects-carousel:hover .carousel-caption .carousel-caption-details {
         height: 100%;
         width: 40%;
     }
 
-    .projects-carousel .carousel-caption:hover {
+    .projects-carousel:hover .carousel-caption {
         top: 60%;
     }
 }
