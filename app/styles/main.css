@@ -22,3 +22,47 @@
 #about {
     margin-bottom: 250px;
 }
+
+.contacts {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contacts i {
+    font-size: 20px;
+}
+
+.contacts li {
+    display: blocK;
+    float: left;
+    width: 100%;
+    font-size: 15px;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.contacts a {
+    display: block;
+    width: 100%;
+    padding: 9px 0;
+    height: 100%;
+}
+
+.contacts li:hover a {
+    background-color: #77AA7D;
+    color: white;
+}
+
+.contact-icon {
+    float: left;
+    margin-right: 70px;
+    margin-left: 30px;
+    text-align: center;
+    width: 20px;
+}
