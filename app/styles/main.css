@@ -19,10 +19,6 @@
     border-radius: 999px;
 }
 
-#about {
-    margin-bottom: 250px;
-}
-
 .contacts {
     list-style-type: none;
     margin: 0;
@@ -81,24 +77,100 @@
     bottom: 0%;
     background-color: rgba(118,176,125,0.9);
     right: 0%;
-    font-size: 30px;
+    transition: all 0.7s;
+}
+
+
+
+.projects-carousel .carousel-indicators {
+    margin: 0;
+    padding: 0;
+    right: 20px;
+    left: initial;
+    width: auto;
+    margin-bottom: 5px;
+}
+
+.projects-carousel .carousel-caption-title {
+    font-size: 40px;
     font-weight: bold;
+    vertical-align:top;
+    text-transform: uppercase;
+}
+
+.projects-carousel .carousel-caption-details {
+    display: inline-block;
+    border-left: 1px solid white;
+    padding-left: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+    line-height: 24px;
+    transition: all 0.7s;
+    height: 0px;
+    width: 0px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.projects-carousel .carousel-caption-details-inner {
+    width: 999px;
+    display: inline-block;
+}
+
+.projects-carousel .carousel-caption-details .label {
+    margin-top: 7px;
+    display: inline-block;
+}
+
+
+.projects-section {
+    padding-top: 60px;
+}
+
+.projects-section h2 {
+    margin-bottom: 15px;
+}
+
+@media(min-width:500px) {
+   .projects-carousel .carousel-caption:hover .carousel-caption-details {
+        height: 100%;
+        width: 40%;
+    }
+
+    .projects-carousel .carousel-caption:hover {
+        top: 60%;
+    }
 }
 
 @media(max-width:766px) {
     .projects-carousel .item {
         height: 250px;
-
     }
 
     .projects-carousel .carousel-caption {
-        font-size: 15px;
         padding-top: 10px;
+    }
+
+    .projects-carousel .carousel-caption-title {
+        font-size: 25px;
+    }
+
+    .projects-carousel .carousel-caption-details {
+        font-size: 14px;
     }
 
     .carousel-indicators {
         bottom: 0px;
     }
+}
 
 
+@media(min-width:1200px) {
+    .projects-carousel .item {
+        height: 700px;
+    }
+
+    .projects-carousel .carousel-caption-details {
+        font-size: 25px;
+    }
 }
