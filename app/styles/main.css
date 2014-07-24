@@ -210,9 +210,10 @@
 
 .skill-caption-title {
     float: left;
-    width: 30%;
+    width: 40%;
     text-align: right;
     padding-right: 10px;
+    padding-left: 10px;
 }
 
 .skill-caption-details {
@@ -231,4 +232,18 @@
 
 .skill-item:hover .skill-caption {
     top: 0;
+}
+
+@media(max-width:766px) {
+    .skill-item:hover .skill-caption {
+        top: 60%;
+    }
+    .skill-caption-details {
+        display: none;
+    }
+    .skill-caption-title {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
 }
