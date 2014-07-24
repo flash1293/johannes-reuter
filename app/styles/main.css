@@ -98,6 +98,12 @@
     text-transform: uppercase;
 }
 
+.badgelink i {
+    vertical-align: top;
+    padding: 0.3em;
+    font-size: 80%;
+}
+
 .projects-carousel .carousel-caption-details {
     display: inline-block;
     border-left: 1px solid white;
