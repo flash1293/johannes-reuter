@@ -174,3 +174,5 @@ sass/*.css
 .sass-cache
 
 codekit-config.json
+
+app/index.html

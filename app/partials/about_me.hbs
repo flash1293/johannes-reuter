@@ -1,0 +1,16 @@
+{{#with sections.about_me}}
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+
+                <h2>{{ title }}</h2>
+                {{#each paragraphs}}
+                    <p>{{{ this }}}</p>
+                {{/each}}
+                
+                <img class="portrait" src="img/{{ portraitURL }}" />
+
+            </div>
+        </div>
+    </section>
+{{/with}}

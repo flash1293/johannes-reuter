@@ -40,6 +40,10 @@ module.exports = function (grunt) {
 				files: ["test/spec/{,*/}*.js"],
 				tasks: ["test:watch"]
 			},
+            hbs: {
+				files: ["<%= yeoman.app %>/{,*/}*.hbs", "<%= yeoman.app %>/{,*/}*.json"],
+				tasks: ["compile-handlebars", "notify:hbs"]
+			},
 			gruntfile: {
 				files: ["Gruntfile.js"]
 			},
@@ -121,7 +125,15 @@ module.exports = function (grunt) {
 			]
 		},
 
-
+        'compile-handlebars': {
+            globbedTemplateAndOutput: {
+                template: './app/index.hbs',
+                templateData: './app/data.json',
+                output: './app/index.html',
+                partials: './app/partials/*.hbs',
+                helpers: './app/helpers/*.js'
+            }
+        },
 
 		notify: {
 		    css: {
@@ -134,6 +146,12 @@ module.exports = function (grunt) {
 			options: {
 			    title: '<%= pkg.name %>',
 			    message: 'JavaScript ready'
+			}
+		    },
+            hbs: {
+			options: {
+			    title: '<%= pkg.name %>',
+			    message: 'Handlebars-Templates ready'
 			}
 		    },
 		    dev: {
@@ -349,6 +367,7 @@ module.exports = function (grunt) {
 		grunt.task.run([
 			"clean:server",
 			"concurrent:server",
+            "compile-handlebars",
 			"autoprefixer",
 			"connect:livereload",
             "notify:dev",
@@ -379,6 +398,7 @@ module.exports = function (grunt) {
 		"clean:dist",
 		"useminPrepare",
 		"concurrent:dist",
+        "compile-handlebars",
 		"autoprefixer",
 		"concat",
 		"cssmin",

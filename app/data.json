@@ -1,0 +1,80 @@
+{
+    'title_pre': 'Johannes',
+    'title': 'Reuter',
+    'subtitle': 'Web Developer',
+    'sections': {
+        'about_me': {
+            'title': 'Über mich',
+            'paragraphs': [
+                'Hallo, ich bin Johannes Reuter, freischaffender Web-Entwickler aus Karlsruhe. Studiert habe ich an der Hochschule für Technik und Wirtschaft.',
+                'Durch meine Projekte habe ich vor allem eins gelernt: Es ist sehr wichtig, in Bewegung zu bleiben. Die ganze Welt, und das Web im Besonderen, ist in stetigem Wandel. An diese Veränderungen muss man sich ständig anpassen, um erfolgreich zu sein und zu bleiben.',
+                'Daher ist meine Philosophie: <strong>keep up to date!</strong> Es gibt jeden Tag zu viel Neues zu entdecken und zu lernen, um im Bett zu bleiben.'
+            ],
+            'portraitURL': 'portrait.jpg'
+        },
+        'projects': {
+            'title': 'Projekte',
+            'slideshow': [
+                {
+                    'name': 'air.de',
+                    'subtitle': 'Umsetzung einer modernen, <br />responsiven Oberfläche <br />für alle Endgeräte',
+                    'url': 'www.air.de',
+                    'imageURL': 'airde.png',
+                    'tags': [
+                        'CSS3',
+                        'Responsive Design',
+                        'HTML5',
+                        'JavaScript'
+                    ]
+                },
+                {
+                    'name': 'Scrumteam',
+                    'subtitle': 'Umsetzung einer frischen, <br />aufgeräumten Website <br />mit Buchungsverwaltung',
+                    'url': 'www.dasscrumteam.com',
+                    'imageURL': 'scrumteam.png',
+                    'tags': [
+                        'CSS3',
+                        'HTML5',
+                        'JavaScript',
+                        'PHP-Backend'
+                    ]
+                },
+                {
+                    'name': 'Seminaut',
+                    'subtitle': 'Erweiterung und Konzeption<br />von Oberfläche<br />und Geschäftslogik',
+                    'url': 'www.seminaut.de',
+                    'imageURL': 'seminaut.png',
+                    'tags': [
+                        'CSS3',
+                        'Responsive Design',
+                        'HTML5',
+                        'PHP-Backend',
+                        'PDF-Generierung'
+                    ]
+                },
+                {
+                    'name': 'Sunnycars-Modul',
+                    'subtitle': 'Konzeption und Umsetzung <br />der Oberfläche und Anbindung <br />über PHP per XML-Schnittstelle',
+                    'url': 'www.urlaubswerk.de',
+                    'imageURL': 'mietwagen.png',
+                    'tags': [
+                        'CSS3',
+                        'AJAX',
+                        'JavaScript',
+                        'PHP-Backend',
+                        'XML-API'
+                    ]
+                }
+            ]
+        },
+        'skills': {
+            'title': 'Skills'
+        },
+        'contact': {
+            'title': 'Kontakt'
+        },
+        'impressum': {
+            'title': 'Impressum'
+        },
+    }
+}
