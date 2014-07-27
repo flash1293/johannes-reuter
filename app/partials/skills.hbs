@@ -1,0 +1,29 @@
+{{#with sections.skills}}
+    <section id="skills" class="container content-section ">
+        <div class="row text-center">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>{{ title }}</h2>
+            </div>
+        </div>
+        <div class="row">
+            {{#each technologies}}
+            <div class="skill-item col-lg-4 col-md-4 col-sm-4 col-xs-6" style="background-image:url(img/skills/{{ imageURL }})">
+                <span class="skill-caption">
+                    <span class="skill-caption-title">
+                        <span class="skill-caption-title-inner">
+                            {{{ name }}}
+                        </span>
+                    </span>
+                    <span class="skill-caption-details">
+                        <span class="skill-caption-details-inner">
+                            {{ description }}<br />
+                            <strong>Skill-Level:</strong> {{#for_n level}}<i class="fa fa-star-o"></i>{{/for_n}}
+                        </span>
+                    </span>
+                </span>
+                <!--<h2>HTML5</h2>-->
+            </div>
+            {{/each}}
+        </div>
+    </section>
+{{/with}}

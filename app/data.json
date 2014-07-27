@@ -68,7 +68,63 @@
             ]
         },
         'skills': {
-            'title': 'Skills'
+            'title': 'Skills',
+            'technologies': [
+                {
+                    'name': 'HTML5',
+                    'description': 'Standard für moderne Websites mit Features wie lokale Datenbanken, Kamera-Zugriff, intelligente Formulare und vieles mehr.',
+                    'level': 3,
+                    'imageURL': 'html5.png'
+                },
+                {
+                    'name': 'Java<wbr />Script',
+                    'description': 'Ermöglicht Programmierung komplexer Anwendungen, die direkt im Browser laufen',
+                    'level': 4,
+                    'imageURL': 'javascript.png'
+                },
+                {
+                    'name': 'CSS3',
+                    'description': 'Styling und Aussehen von Websites. Unterstützt Animationen und 3D-Effekte.',
+                    'level': 4,
+                    'imageURL': 'css3.png'
+                },
+                {
+                    'name': 'Smarty',
+                    'description': 'Serverseitige Templating-Engine, um möglichst schnell komplexe Layouts zu entwerfen.',
+                    'level': 3,
+                    'imageURL': 'smarty.png'
+                },
+                {
+                    'name': 'MySQL',
+                    'description': 'Datenbank-Sprache, ermöglicht die Formulierung komplexer Daten-Abfragen.',
+                    'level': 3,
+                    'imageURL': 'mysql.png'
+                },
+                {
+                    'name': 'Canvas',
+                    'description': 'HTML5-Element zum Zeichnen im Browser (z.B. 2D-Spiele oder Diagramm-Grafiken)',
+                    'level': 2,
+                    'imageURL': 'canvas.png'
+                },
+                {
+                    'name': 'PHP',
+                    'description': 'Serverseitige Sprache zum Programmieren von Anwendungslogik (Nutzer-Authorisierung etc.)',
+                    'level': 4,
+                    'imageURL': 'php.png'
+                },
+                {
+                    'name': 'Angular',
+                    'description': 'JavaScript-Framework, das schnelles Entwickeln von gut strukturierten Anwendungen ermöglicht.',
+                    'level': 2,
+                    'imageURL': 'angular.png'
+                },
+                {
+                    'name': 'Word<wbr />press',
+                    'description': 'Blog-Verwaltungstool, wird eingesetzt, um die Inhalte von Blogs oder Websites komfortabel im Browser zu verwalten.',
+                    'level': 2,
+                    'imageURL': 'wordpress.png'
+                }
+            ]
         },
         'contact': {
             'title': 'Kontakt'
