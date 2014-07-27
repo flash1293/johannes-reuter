@@ -211,19 +211,26 @@
 .skill-caption-title {
     float: left;
     width: 40%;
-    text-align: right;
+}
+
+.skill-caption-title-inner {
     padding-right: 10px;
     padding-left: 10px;
+    float: right;
 }
 
 .skill-caption-details {
     width: 60%;
     float: left;
-    border-left: 1px solid white;
-    padding: 10px;
     font-size: 12px;
     text-align: left;
     padding-bottom: 20px;
+}
+
+.skill-caption-details-inner {
+    border-left: 1px solid white;
+    padding: 10px;
+    float: left;
 }
 
 .skill-caption-details .fa-star-o {
@@ -235,13 +242,15 @@
 }
 
 @media(max-width:766px) {
-    .skill-item:hover .skill-caption {
+    .skill-item .skill-caption, .skill-item:hover .skill-caption {
         top: 60%;
+        border-left: 1px solid white;
     }
     .skill-caption-details {
         display: none;
     }
-    .skill-caption-title {
+
+    .skill-caption-title, .skill-caption-title-inner {
         width: 100%;
         padding: 0;
         text-align: center;
