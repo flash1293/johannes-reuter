@@ -243,6 +243,7 @@ module.exports = function (grunt) {
 		// Performs rewrites based on rev and the useminPrepare configuration
 		usemin: {
 			options: {
+                basedir: "<%= yeoman.dist %>",
 				assetsDirs: ["<%= yeoman.dist %>"]
 			},
 			html: ["<%= yeoman.dist %>/{,*/}*.html"],
@@ -331,14 +332,13 @@ module.exports = function (grunt) {
 						"img/{,*/}*.webp",
 						"{,*/}*.html",
 						"styles/fonts/{,*/}*.*",
-						"bower_components/" + (this.includeCompass ? "sass-" : "") + (this.includeCompass ? "fonts/" : "dist/fonts/") +"*.*",
-                        "bower_components/fontawesome/fonts/*.*",
-                        "bower_components/bootstrap/dist/fonts/*.*"
+						"bower_components/" + (this.includeCompass ? "sass-" : "") + (this.includeCompass ? "fonts/" : "dist/fonts/") +"*.*"
 					]
 				},
                 {
-					expand: false,
-					dest: "<%= yeoman.dist %>/fonts",
+					expand: true,
+					dest: "<%= yeoman.dist %>/fonts/",
+                    flatten: true,
 					src: [
                         "<%= yeoman.app %>/bower_components/fontawesome/fonts/*.*",
                         "<%= yeoman.app %>/bower_components/bootstrap/dist/fonts/*.*"
@@ -378,8 +378,8 @@ module.exports = function (grunt) {
 			],
 			dist: [
 				"copy:styles",
-				//"imagemin",
-				//"svgmin"
+				"imagemin",
+				"svgmin"
 			]
 		}
 	});
@@ -421,7 +421,7 @@ module.exports = function (grunt) {
 	});
 
 	grunt.registerTask("build", [
-		"clean:dist",
+		"clean",
 		"useminPrepare",
 		"concurrent:dist",
         "compile-handlebars",
