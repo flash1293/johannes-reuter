@@ -1,0 +1,13 @@
+{{#with sections.imprint}}
+<section id="imprint" class="container content-section imprint-section">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>{{ title }}</h2>
+            <div style="display:none" id="imprint-content">
+                {{> paragraphs}}
+            </div>
+            <a class="showbar" href="#" data-showOnClick="imprint-content"><i class="fa fa-arrow-down"></i></a>
+        </div>
+    </div>
+</section>
+{{/with}}

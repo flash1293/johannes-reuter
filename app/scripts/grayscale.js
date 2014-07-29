@@ -1,3 +1,5 @@
+/*global $:false */
+
 (function () {
     "use strict";
 
@@ -21,4 +23,4 @@
             event.preventDefault();
         });
     });
-})();
+}());

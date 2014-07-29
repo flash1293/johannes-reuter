@@ -54,6 +54,23 @@
     color: white;
 }
 
+h2 {
+    text-align: center;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+h2:after {
+    content: "~";
+    color: #77AA7D;
+    display:block;
+    font-size: 50px;
+    margin-top: 10px;
+    text-align: center;
+}
+
 .contact-icon {
     float: left;
     margin-right: 70px;
@@ -259,4 +276,20 @@
         padding: 0;
         text-align: center;
     }
+}
+
+.imprint-section p {
+    font-size: 12px;
+}
+
+.imprint-section {
+    padding-bottom: 80px;
+}
+
+.showbar {
+    text-align: center;
+    display: block;
+    font-size: 40px;
+    margin: 10px 0;
+    cursor: pointer;
 }

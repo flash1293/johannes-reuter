@@ -1,0 +1,15 @@
+{{#with sections.contact}}
+<section id="contact" class="container content-section ">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>{{ title }}</h2>
+            {{> paragraphs}}
+            <ul class="contacts">
+                {{#each channels}}
+                    <li><a href="{{ link }}"><span class="contact-icon"><i class="fa fa-{{ icon }}"></i></span> {{ text }}</a></li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</section>
+{{/with}}
