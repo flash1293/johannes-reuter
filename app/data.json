@@ -135,27 +135,27 @@
                 {
                     'icon': 'envelope-o',
                     'text': 'email@johannes-reuter.de',
-                    'link': '#'
+                    'link': 'mailto:email@johannes-reuter.de'
                 },
                 {
                     'icon': 'mobile',
-                    'text': '0176 / 1234567',
-                    'link': '#'
+                    'text': '0176 / 914 952 71',
+                    'link': 'tel:017691495271'
                 },
                 {
                     'icon': 'github',
                     'text': 'flash1293',
-                    'link': '#'
+                    'link': 'https://github.com/flash1293'
                 },
                 {
                     'icon': 'facebook',
                     'text': 'Johannes Reuter',
-                    'link': '#'
+                    'link': 'https://www.facebook.com/johannes.reuter.739'
                 },
                 {
                     'icon': 'reddit',
                     'text': 'curian17',
-                    'link': '#'
+                    'link': 'http://www.reddit.com/user/curian17'
                 }
             ]
         },
