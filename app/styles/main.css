@@ -79,6 +79,12 @@ h2:after {
     width: 20px;
 }
 
+@media(max-width:340px) {
+    .contact-icon {
+        margin-right: 30px;
+    }
+}
+
 .projects-carousel {
     margin-top: -25px;
 }
@@ -243,7 +249,7 @@ h2:after {
 .skill-caption-details {
     width: 60%;
     float: left;
-    font-size: 12px;
+    font-size: 14px;
     text-align: left;
     padding-bottom: 20px;
 }
@@ -254,7 +260,7 @@ h2:after {
     float: left;
 }
 
-.skill-caption-details .fa-star-o {
+.skill-caption-details .fa-star {
     margin-right: 3px;
 }
 
@@ -279,7 +285,7 @@ h2:after {
 }
 
 .imprint-section p {
-    font-size: 12px;
+    font-size: 15px;
 }
 
 .imprint-section {
