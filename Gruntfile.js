@@ -39,7 +39,7 @@ module.exports = function (grunt) {
                 exclusions: [],
                 keep: [],
                 simple: false,
-                useList: false
+                useList: true
             }
         },
 
