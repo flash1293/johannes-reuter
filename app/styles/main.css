@@ -290,6 +290,7 @@ h2:after {
 
 .imprint-section {
     padding-bottom: 80px;
+    word-break: break-word;
 }
 
 .showbar {
