@@ -27,6 +27,22 @@ module.exports = function (grunt) {
 			dist: "dist"
 		},
 
+        ftpush: {
+            build: {
+                auth: {
+                    host: 'isp.alpha-q.de',
+                    port: 21,
+                    authKey: 'alphaq'
+                },
+                src: 'dist',
+                dest: 'html/johannesreuter',
+                exclusions: [],
+                keep: [],
+                simple: false,
+                useList: false
+            }
+        },
+
 		// Watches files for changes and runs tasks based on the changed files
 		watch: {
 			js: {
@@ -315,7 +331,17 @@ module.exports = function (grunt) {
 						"img/{,*/}*.webp",
 						"{,*/}*.html",
 						"styles/fonts/{,*/}*.*",
-						"bower_components/" + (this.includeCompass ? "sass-" : "") + (this.includeCompass ? "fonts/" : "dist/fonts/") +"*.*"
+						"bower_components/" + (this.includeCompass ? "sass-" : "") + (this.includeCompass ? "fonts/" : "dist/fonts/") +"*.*",
+                        "bower_components/fontawesome/fonts/*.*",
+                        "bower_components/bootstrap/dist/fonts/*.*"
+					]
+				},
+                {
+					expand: false,
+					dest: "<%= yeoman.dist %>/fonts",
+					src: [
+                        "<%= yeoman.app %>/bower_components/fontawesome/fonts/*.*",
+                        "<%= yeoman.app %>/bower_components/bootstrap/dist/fonts/*.*"
 					]
 				}]
 			},
@@ -352,8 +378,8 @@ module.exports = function (grunt) {
 			],
 			dist: [
 				"copy:styles",
-				"imagemin",
-				"svgmin"
+				//"imagemin",
+				//"svgmin"
 			]
 		}
 	});
@@ -410,6 +436,11 @@ module.exports = function (grunt) {
 		"htmlmin",
         "notify:all"
 	]);
+
+    grunt.registerTask("deploy", [
+         "build",
+         "ftpush"
+    ]);
 
 	grunt.registerTask("default", [
 		"newer:jshint",
