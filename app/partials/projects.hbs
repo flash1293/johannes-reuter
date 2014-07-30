@@ -18,12 +18,10 @@
                                 <a class="badgelink" target="_blank" href="http://{{ url }}"><i class="fa fa-link"></i></a>{{ name }}
                             </span>
                             <span class="carousel-caption-details">
-                                <span class="carousel-caption-details-inner">
-                                    {{{ subtitle }}}<br />
-                                    {{#each tags}}
-                                        <span class="label label-info">{{ this }}</span>{{#is @index 2}}<br />{{/is}}
-                                    {{/each}}
-                                </span>
+                                {{{ subtitle }}}<br />
+                                {{#each tags}}
+                                    <span class="label label-info">{{ this }}</span>{{#is @index 2}}<br />{{/is}}
+                                {{/each}}
                             </span>
                         </div>
                     </div>

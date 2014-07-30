@@ -96,7 +96,7 @@ h2:after {
         }
 
         .carousel-caption {
-            top: 75%;
+            top: 78%;
             left: 0;
             bottom: 0;
             background-color: @themeColor;
@@ -113,14 +113,8 @@ h2:after {
                 line-height: 24px;
                 transition: all 0.7s;
                 height: 0;
-                width: 0;
                 overflow: hidden;
                 text-align: left;
-
-                .carousel-caption-details-inner {
-                    width: 999px;
-                    display: inline-block;
-                }
 
                 .label {
                     margin-top: 7px;
@@ -129,7 +123,7 @@ h2:after {
             }
 
              .carousel-caption-title {
-                font-size: 40px;
+                font-size: 34px;
                 font-weight: bold;
                 vertical-align:top;
                 text-transform: uppercase;
@@ -155,10 +149,9 @@ h2:after {
             text-shadow: @borderColor1 1px 1px 1px;
         }
 
-        @media(min-width:500px) {
+        @media(min-width:767px) {
            &:hover .carousel-caption .carousel-caption-details {
                 height: 100%;
-                width: 40%;
             }
 
             &:hover .carousel-caption {
@@ -175,14 +168,16 @@ h2:after {
                 padding-top: 10px;
                 .carousel-caption-title {
                     font-size: 25px;
+                    text-align: center;
                 }
                 .carousel-caption-details {
-                    font-size: 14px;
+                    display: none;
                 }
             }
 
             .carousel-indicators {
-                bottom: 0;
+                top: 10px;
+                bottom: 100%;
             }
         }
 
