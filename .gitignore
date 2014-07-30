@@ -175,6 +175,11 @@ sass/*.css
 
 codekit-config.json
 
-app/index.html
+
 .ftppass
 .grunt
+
+#generated files
+app/index.html
+app/styles/skills_sprites.css
+app/img/skills.png

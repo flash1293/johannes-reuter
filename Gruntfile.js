@@ -43,6 +43,19 @@ module.exports = function (grunt) {
             }
         },
 
+        sprite:{
+            skills: {
+                src: '<%= yeoman.app %>/sprites/skills/*.png',
+                destImg: '<%= yeoman.app %>/img/skills.png',
+                destCSS: '<%= yeoman.app %>/styles/skills_sprites.css',
+                cssOpts: {
+                    cssClass: function (item) {
+                        return '.skill-' + item.name;
+                    }
+                }
+            }
+        },
+
 		// Watches files for changes and runs tasks based on the changed files
 		watch: {
 			js: {
@@ -67,6 +80,10 @@ module.exports = function (grunt) {
 				files: ["<%= yeoman.app %>/styles/{,*/}*.css"],
 				tasks: ["newer:copy:styles", "autoprefixer", "notify:css"]
 			},
+            spriteimgs: {
+                files: ["<%= yeoman.app %>/img/{,*/}*.{gif,jpeg,jpg,png,svg,webp}"],
+                tasks: ["sprite", "notify:sprite"]
+            },
 			livereload: {
 				options: {
 					livereload: "<%= connect.options.livereload %>"
@@ -168,6 +185,12 @@ module.exports = function (grunt) {
 			options: {
 			    title: '<%= pkg.name %>',
 			    message: 'Handlebars-Templates ready'
+			}
+		    },
+            sprite: {
+			options: {
+			    title: '<%= pkg.name %>',
+			    message: 'Generated Sprites ready'
 			}
 		    },
 		    dev: {
@@ -391,6 +414,7 @@ module.exports = function (grunt) {
 
 		grunt.task.run([
 			"clean:server",
+            "sprite",
 			"concurrent:server",
             "compile-handlebars",
 			"autoprefixer",
@@ -421,6 +445,7 @@ module.exports = function (grunt) {
 
 	grunt.registerTask("build", [
 		"clean",
+        "sprite",
 		"useminPrepare",
 		"concurrent:dist",
         "compile-handlebars",
