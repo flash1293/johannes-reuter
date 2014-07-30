@@ -71,7 +71,7 @@
             'technologies': [
                 {
                     'name': 'HTML5',
-                    'description': 'Standard für moderne Websites mit Features wie lokale Datenbanken, Kamera-Zugriff, intelligente Formulare und vieles mehr.',
+                    'description': 'Standard für moderne Websites mit Features wie lokale Datenbanken oder Mikrofon und Kamera-Zugriff.',
                     'level': 3,
                     'imageURL': 'html5.png'
                 },
@@ -88,10 +88,10 @@
                     'imageURL': 'css3.png'
                 },
                 {
-                    'name': 'Smarty',
-                    'description': 'Serverseitige Templating-Engine, um möglichst schnell komplexe Layouts zu entwerfen.',
+                    'name': 'JQuery',
+                    'description': 'JavaScript-Framework, bietet zahlreiche Möglichkeiten zur Oberflächengestaltung',
                     'level': 3,
-                    'imageURL': 'smarty.png'
+                    'imageURL': 'jquery.png'
                 },
                 {
                     'name': 'MySQL',

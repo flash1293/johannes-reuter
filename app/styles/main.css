@@ -209,79 +209,38 @@ h2:after {
 }
 
 .skill-item {
-    background-size: contain;
+    background-size: 60px;
+    background-position: 5px 0;
     background-repeat: no-repeat;
-    background-position: center;
-    height: 200px;
+    height: 150px;
     margin-bottom: 20px;
-    position: relative;
     overflow: hidden;
 }
 
-.skill-caption {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    text-align: center;
-    background-color: #77AA7D;
-    background-color: rgba(118,176,125,0.9);
-    padding-top: 10px;
-    transition: all 0.5s;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
-    bottom: 0;
+@media(max-width:500px) {
+    .skill-item {
+        width: 100%;
+        margin-bottom: 10px;
+        height: auto;
+    }
 }
 
 .skill-caption-title {
-    float: left;
-    width: 40%;
-}
-
-.skill-caption-title-inner {
-    padding-right: 10px;
-    padding-left: 10px;
-    float: right;
+    margin-left: 60px;
+    padding-bottom: 7px;
+    display: block;
 }
 
 .skill-caption-details {
-    width: 60%;
-    float: left;
-    font-size: 14px;
+    margin-left: 60px;
+    font-size: 12px;
     text-align: left;
     padding-bottom: 20px;
-}
-
-.skill-caption-details-inner {
-    border-left: 1px solid white;
-    padding: 10px;
-    float: left;
+    display: block;
 }
 
 .skill-caption-details .fa-star {
     margin-right: 3px;
-}
-
-.skill-item:hover .skill-caption {
-    top: 0;
-}
-
-@media(max-width:766px) {
-    .skill-item .skill-caption, .skill-item:hover .skill-caption {
-        top: 60%;
-        border-left: 1px solid white;
-    }
-    .skill-caption-details {
-        display: none;
-    }
-
-    .skill-caption-title, .skill-caption-title-inner {
-        width: 100%;
-        padding: 0;
-        text-align: center;
-    }
 }
 
 .imprint-section p {
