@@ -1,0 +1,318 @@
+/*------------------------------------------------------------------------------------------------------------------------
+ @package: johannesreuter
+
+ @author: Johannes Reuter
+ @www: www.johannes-reuter.de
+
+ @copyright: COPYRIGHT 20 Johannes Reuter
+ @license: MIT
+
+ =============================================================================
+ Filename: main.css
+ =============================================================================
+ This file is responsible for all styles on the johannesreuter app.
+ --------------------------------------------------------------------------------------------------------------------- */
+
+/* settings */
+@themeColor: #77AA7D;
+@fontColor1: white;
+@fontColor2: #888;
+@borderColor1: #aaa;
+@borderColor2: white;
+
+/* base-Styles */
+@import "grayscale.less";
+
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+a {
+    color: @themeColor;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: darken(@themeColor, 30%);
+}
+
+.navbar {
+    background-color: fade(@themeColor, 90%);
+}
+
+@media(min-width:767px) {
+    .navbar {
+        background: rgba(0,0,0,0.2);
+    }
+
+    .top-nav-collapse {
+        background-color: fade(@themeColor, 90%);
+    }
+}
+
+/* green ~-sign under section-headings */
+h2:after {
+    content: "~";
+    color: @themeColor;
+    display:block;
+    font-size: 50px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+/* About-me section */
+
+.portrait {
+    display: inline-block;
+    margin: 20px 0;
+    border-radius: 999px;
+}
+
+
+/* Projects section */
+
+.projects-section {
+    padding-top: 60px;
+
+    .projects-carousel {
+        margin-top: -25px;
+
+        .item {
+            background-size: cover;
+            background-position: top center;
+            background-color: black;
+            width: 100%;
+            height: 500px;
+        }
+
+        .carousel-caption {
+            top: 75%;
+            left: 0;
+            bottom: 0;
+            background-color: @themeColor;
+            background-color: fade(@themeColor, 90%);
+            right: 0;
+            transition: all 0.7s;
+
+            .carousel-caption-details {
+                display: inline-block;
+                border-left: 1px solid @borderColor2;
+                padding-left: 10px;
+                margin-left: 10px;
+                font-size: 20px;
+                line-height: 24px;
+                transition: all 0.7s;
+                height: 0;
+                width: 0;
+                overflow: hidden;
+                text-align: left;
+
+                .carousel-caption-details-inner {
+                    width: 999px;
+                    display: inline-block;
+                }
+
+                .label {
+                    margin-top: 7px;
+                    display: inline-block;
+                }
+            }
+
+             .carousel-caption-title {
+                font-size: 40px;
+                font-weight: bold;
+                vertical-align:top;
+                text-transform: uppercase;
+            }
+        }
+
+        .carousel-indicators {
+            margin: 0;
+            padding: 0;
+            right: 20px;
+            left: inherit;
+            width: auto;
+            margin-bottom: 5px;
+        }
+
+        .badgelink i {
+            vertical-align: top;
+            padding: 0.3em;
+            font-size: 80%;
+            background-color: @borderColor2;
+            border-radius: 5px;
+            margin-right: 5px;
+            text-shadow: @borderColor1 1px 1px 1px;
+        }
+
+        @media(min-width:500px) {
+           &:hover .carousel-caption .carousel-caption-details {
+                height: 100%;
+                width: 40%;
+            }
+
+            &:hover .carousel-caption {
+                top: 60%;
+            }
+        }
+
+        @media(max-width:766px) {
+            .item {
+                height: 250px;
+            }
+
+            .carousel-caption {
+                padding-top: 10px;
+                .carousel-caption-title {
+                    font-size: 25px;
+                }
+                .carousel-caption-details {
+                    font-size: 14px;
+                }
+            }
+
+            .carousel-indicators {
+                bottom: 0;
+            }
+        }
+
+
+        @media(min-width:1200px) {
+            .item {
+                height: 700px;
+            }
+
+            .carousel-caption-details {
+                font-size: 25px;
+            }
+        }
+    }
+
+}
+
+
+/* skills section */
+
+.skill-item {
+    background-size: 60px;
+    background-position: 5px 0;
+    background-repeat: no-repeat;
+    height: 150px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+
+    .skillicon {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 5px;
+    }
+
+    .skill-caption-title {
+        margin-left: 60px;
+        padding-bottom: 7px;
+        display: block;
+    }
+
+    .skill-caption-details {
+        margin-left: 60px;
+        font-size: 12px;
+        text-align: left;
+        padding-bottom: 20px;
+        display: block;
+
+        .fa-star {
+            margin-right: 3px;
+        }
+    }
+
+    @media(max-width:500px) {
+        & {
+            width: 100%;
+            margin-bottom: 10px;
+            height: auto;
+        }
+    }
+}
+
+
+/* contacts-section */
+
+.contacts {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    .contact-icon {
+        float: left;
+        margin-right: 70px;
+        margin-left: 30px;
+        text-align: center;
+        width: 20px;
+    }
+
+    @media(max-width:340px) {
+        .contact-icon {
+            margin-right: 30px;
+        }
+    }
+
+    i {
+        font-size: 20px;
+    }
+
+    li {
+        display: blocK;
+        float: left;
+        width: 100%;
+        font-size: 15px;
+        margin: 0;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        border-top: 1px solid @borderColor1;
+        border-bottom: 1px solid @borderColor1;
+        transition: all 0.3s;
+        cursor: pointer;
+        &:hover a {
+            background-color: @themeColor;
+            color: @fontColor1;
+        }
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        padding: 9px 0;
+    }
+}
+
+
+/* imprint-section */
+
+.imprint-section {
+    padding-bottom: 80px;
+    word-break: break-word;
+    p {
+        font-size: 15px;
+    }
+
+    /* arrow (click to open imprint) */
+    .showbar {
+        text-align: center;
+        display: block;
+        font-size: 40px;
+        margin: 10px 0;
+        cursor: pointer;
+    }
+}

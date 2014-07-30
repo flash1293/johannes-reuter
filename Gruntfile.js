@@ -56,6 +56,17 @@ module.exports = function (grunt) {
             }
         },
 
+        less: {
+            all: {
+                options: {
+                    paths: ["<%= yeoman.app %>/styles"]
+                },
+                files: {
+                    "<%= yeoman.app %>/styles/main.css": "<%= yeoman.app %>/styles/main.less"
+                }
+            }
+        },
+
 		// Watches files for changes and runs tasks based on the changed files
 		watch: {
 			js: {
@@ -76,9 +87,9 @@ module.exports = function (grunt) {
 			gruntfile: {
 				files: ["Gruntfile.js"]
 			},
-			styles: {
-				files: ["<%= yeoman.app %>/styles/{,*/}*.css"],
-				tasks: ["newer:copy:styles", "autoprefixer", "notify:css"]
+            less: {
+				files: ["<%= yeoman.app %>/styles/{,*/}*.less"],
+				tasks: ["less", "newer:copy:styles", "autoprefixer", "notify:css"]
 			},
             spriteimgs: {
                 files: ["<%= yeoman.app %>/img/{,*/}*.{gif,jpeg,jpg,png,svg,webp}"],
@@ -415,6 +426,7 @@ module.exports = function (grunt) {
 		grunt.task.run([
 			"clean:server",
             "sprite",
+            "less",
 			"concurrent:server",
             "compile-handlebars",
 			"autoprefixer",
@@ -446,6 +458,7 @@ module.exports = function (grunt) {
 	grunt.registerTask("build", [
 		"clean",
         "sprite",
+        "less",
 		"useminPrepare",
 		"concurrent:dist",
         "compile-handlebars",
