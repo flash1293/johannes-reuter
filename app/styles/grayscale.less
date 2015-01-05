@@ -111,12 +111,16 @@ p {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(/img/intro-bg.jpg) no-repeat bottom center scroll;
-    background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    background: #34aa22; /* Old browsers */
+    background: #77aa7d; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #77aa7d 0%, #37a844 69%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#77aa7d), color-stop(69%,#37a844)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg,  #77aa7d 0%,#37a844 69%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg,  #77aa7d 0%,#37a844 69%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg,  #77aa7d 0%,#37a844 69%); /* IE10+ */
+    background: linear-gradient(135deg,  #77aa7d 0%,#37a844 69%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#77aa7d', endColorstr='#37a844',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    
 }
 
 .intro-body {
