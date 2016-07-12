@@ -132,7 +132,7 @@
             ],
             'channels': [
                 {
-                    'icon': 'envelope-o',
+                    'icon': 'mail',
                     'text': 'email@johannes-reuter.de',
                     'link': 'mailto:email@johannes-reuter.de'
                 },
@@ -142,7 +142,7 @@
                     'link': 'tel:017691495271'
                 },
                 {
-                    'icon': 'github',
+                    'icon': 'github-circled',
                     'text': 'flash1293',
                     'link': 'https://github.com/flash1293'
                 },

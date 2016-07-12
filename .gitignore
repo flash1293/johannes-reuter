@@ -185,3 +185,5 @@ app/styles/skills_sprites.css
 app/img/skills.png
 app/styles/main.css
 app/img/projects/*-*.*
+app/font
+app/styles/fontello*

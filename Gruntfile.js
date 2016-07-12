@@ -46,13 +46,11 @@ module.exports = function (grunt) {
         sprite:{
             skills: {
                 src: '<%= yeoman.app %>/sprites/skills/*.png',
-                destImg: '<%= yeoman.app %>/img/skills.png',
-                destCSS: '<%= yeoman.app %>/styles/skills_sprites.css',
-                cssOpts: {
-                    cssClass: function (item) {
-                        return '.skill-' + item.name;
-                    }
-                }
+                dest: '<%= yeoman.app %>/img/skills.png',
+                destCss: '<%= yeoman.app %>/styles/skills_sprites.css',
+		cssVarMap: function(sprite) {
+			sprite.name = 'skill-' + sprite.name;
+		}
             }
         },
 
@@ -66,7 +64,16 @@ module.exports = function (grunt) {
                 }
             }
         },
-
+	fontello: {
+	    dist: {
+	      options: {
+	      	  config: 'fontello-config.json',
+		  fonts   : 'app/font',
+		  styles  : 'app/styles',
+		  exclude: ['animation.css', 'fontello-ie7.css', 'fontello-ie7-codes.css', 'fontello.eot'],
+	      }
+	    }
+	},
 		// Watches files for changes and runs tasks based on the changed files
 		watch: {
 			js: {
@@ -392,11 +399,10 @@ module.exports = function (grunt) {
 				},
                 {
 					expand: true,
-					dest: "<%= yeoman.dist %>/fonts/",
+					dest: "<%= yeoman.dist %>/font/",
                     flatten: true,
 					src: [
-                        "<%= yeoman.app %>/bower_components/fontawesome/fonts/*.*",
-                        "<%= yeoman.app %>/bower_components/bootstrap/dist/fonts/*.*"
+                        "<%= yeoman.app %>/font/*.*",
 					]
 				}]
 			},
