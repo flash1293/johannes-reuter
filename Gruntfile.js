@@ -38,8 +38,6 @@ module.exports = function (grunt) {
                 dest: 'html/johannesreuter',
                 exclusions: [],
                 keep: [],
-                simple: true,
-                useList: true
             }
         },
 
