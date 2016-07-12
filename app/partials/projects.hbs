@@ -1,40 +1,31 @@
 {{#with sections.projects}}
-    <section id="projects" class="projects-section text-center">
-        <h2>{{ title }}</h2>
-        <div id="carousel-projects" class="carousel slide projects-carousel" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                {{#each slideshow}}
-                    <li data-target="#carousel-projects" data-slide-to="{{ @index }}" {{#if @first}} class="active"{{/if}}></li>
-                {{/each}}
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-                {{#each slideshow}}
-                    <div class="item{{#if @first}} active{{/if}}" style="background-image: url(/img/projects/{{ imageURL }})">
-                        <div class="carousel-caption">
-                            <span class="carousel-caption-title">
-                                <a class="badgelink" target="_blank" href="http://{{ url }}"><i class="fa fa-link"></i></a>{{ name }}
-                            </span>
-                            <span class="carousel-caption-details">
-                                {{{ subtitle }}}<br />
-                                {{#each tags}}
-                                    <span class="label label-info">{{ this }}</span>{{#is @index 2}}<br />{{/is}}
-                                {{/each}}
-                            </span>
-                        </div>
-                    </div>
-                {{/each}}
+    <section id="projects" class="container projects-section">
+        <h2 class="text-center">{{ title }}</h2>
+	{{#each entries}}
+	    <div class="row">
+		    <div class="col-xs-12 media item">
+			<div class="pull-alternating">
+				<picture class="media-object">
+					<source srcset="/img/projects/{{ imageURL }}-small.png" media="(max-width: 600px)">
+					<source srcset="/img/projects/{{ imageURL }}-medium.png" media="(max-width: 1000px)">
+					<source srcset="/img/projects/{{ imageURL }}-large.png" media="(min-width: 1001px)">
+					<img src="/img/projects/{{ imageURL }}-large.png">
+				</picture>
+			</div>
+			<div class="media-body caption">
+			    <div class="caption-title">
+				<a class="badgelink" target="_blank" href="http://{{ url }}"><i class="fa fa-link"></i></a>{{ name }}
+			    </div>
+			    <div class="caption-details">
+				{{{ subtitle }}}<br />
+				{{#each tags}}
+				    <span class="label label-info">{{ this }}</span>{{#is @index 2}}<br />{{/is}}
+				{{/each}}
+			    </div>
+			</div>
+		    </div>
             </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-projects" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a class="right carousel-control" href="#carousel-projects" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
+	{{/each}}
         </div>
 </section>
 {{/with}}

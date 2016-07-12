@@ -84,36 +84,19 @@ h2:after {
 .projects-section {
     padding-top: 60px;
 
-    .projects-carousel {
-        margin-top: -25px;
+	.item {
+		margin-bottom: 70px;
+	}
 
-        .item {
-            background-size: cover;
-            background-position: top center;
-            background-color: black;
-            width: 100%;
-            height: 500px;
-        }
+        .caption {
 
-        .carousel-caption {
-            top: 78%;
-            left: 0;
-            bottom: 0;
-            background-color: @themeColor;
-            background-color: fade(@themeColor, 90%);
-            right: 0;
-            transition: all 0.7s;
-
-            .carousel-caption-details {
+            .caption-details {
                 display: inline-block;
                 border-left: 1px solid @borderColor2;
-                padding-left: 10px;
                 margin-left: 10px;
-                font-size: 20px;
+                font-size: 14px;
                 line-height: 24px;
                 transition: all 0.7s;
-                height: 0;
-                overflow: hidden;
                 text-align: left;
 
                 .label {
@@ -122,22 +105,46 @@ h2:after {
                 }
             }
 
-             .carousel-caption-title {
-                font-size: 34px;
+             .caption-title {
+		margin-left: 10px;
+                font-size: 20px;
                 font-weight: bold;
                 vertical-align:top;
                 text-transform: uppercase;
             }
         }
 
-        .carousel-indicators {
-            margin: 0;
-            padding: 0;
-            right: 20px;
-            left: inherit;
-            width: auto;
-            margin-bottom: 5px;
-        }
+	.pull-alternating {
+		float: left;
+	}	
+
+	
+	@media(min-width:767px) {
+	 	.row {
+			.pull-alternating + .caption {
+				padding-top: 40px;
+			}
+
+			.pull-alternating + .caption *, .pull-alternating + .caption  {
+				text-align: center;
+			}
+		}
+
+	        .row:nth-child(even) {
+			.pull-alternating {
+				float: right;
+				margin-left: 10px;
+			}	
+
+		}
+
+	       .row:nth-child(odd) {
+			.pull-alternating {
+				float: left;
+				margin-right: 10px;
+			}	
+		}
+	}
 
         .badgelink i {
             vertical-align: top;
@@ -149,50 +156,16 @@ h2:after {
             text-shadow: @borderColor1 1px 1px 1px;
         }
 
-        @media(min-width:767px) {
-           &:hover .carousel-caption .carousel-caption-details {
-                height: 100%;
-            }
-
-            &:hover .carousel-caption {
-                top: 60%;
-            }
-        }
-
-        @media(max-width:766px) {
-            .item {
-                height: 250px;
-            }
-
-            .carousel-caption {
-                padding-top: 10px;
-                .carousel-caption-title {
-                    font-size: 25px;
-                    text-align: center;
-                }
-                .carousel-caption-details {
-                    display: none;
-                }
-            }
-
-            .carousel-indicators {
-                top: 10px;
-                bottom: 100%;
-            }
-        }
-
-
-        @media(min-width:1200px) {
-            .item {
-                height: 700px;
-            }
-
-            .carousel-caption-details {
-                font-size: 25px;
-            }
-        }
-    }
-
+	@media(min-width:767px) {
+		.caption {	
+			.caption-details {
+				font-size: 20px;
+			}
+			.caption-title {
+				font-size: 27px;
+			}
+		}
+	}
 }
 
 

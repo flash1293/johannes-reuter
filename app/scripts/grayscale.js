@@ -19,7 +19,10 @@
             var $anchor = $(this);
             $("html, body").stop().animate({
                 scrollTop: $($anchor.attr("href")).offset().top
-            }, 500, "swing");
+            }, 500, "swing", function() {
+			//set hash to correct value
+			window.location.hash = $anchor.attr("href");
+		});
             event.preventDefault();
         });
     });

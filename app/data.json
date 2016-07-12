@@ -13,12 +13,12 @@
         },
         'projects': {
             'title': 'Projekte',
-            'slideshow': [
+            'entries': [
                 {
                     'name': 'air.de',
                     'subtitle': 'Umsetzung einer modernen, <br />responsiven Oberfläche <br />für alle Endgeräte',
                     'url': 'www.air.de',
-                    'imageURL': 'airde.png',
+                    'imageURL': 'airde',
                     'tags': [
                         'CSS3',
                         'Responsive Design',
@@ -30,7 +30,7 @@
                     'name': 'Scrumteam',
                     'subtitle': 'Umsetzung einer frischen, <br />aufgeräumten Website <br />mit Buchungsverwaltung',
                     'url': 'www.dasscrumteam.com',
-                    'imageURL': 'scrumteam.png',
+                    'imageURL': 'scrumteam',
                     'tags': [
                         'CSS3',
                         'HTML5',
@@ -42,7 +42,7 @@
                     'name': 'Seminaut',
                     'subtitle': 'Erweiterung und Konzeption<br />von Oberfläche<br />und Geschäftslogik',
                     'url': 'www.seminaut.de',
-                    'imageURL': 'seminaut.png',
+                    'imageURL': 'seminaut',
                     'tags': [
                         'CSS3',
                         'Responsive Design',
@@ -55,7 +55,7 @@
                     'name': 'Sunnycars-Modul',
                     'subtitle': 'Konzeption und Umsetzung <br />der Oberfläche und Anbindung <br />über PHP per XML-Schnittstelle',
                     'url': 'www.urlaubswerk.de',
-                    'imageURL': 'mietwagen.png',
+                    'imageURL': 'mietwagen',
                     'tags': [
                         'CSS3',
                         'AJAX',
@@ -150,11 +150,6 @@
                     'icon': 'facebook',
                     'text': 'Johannes Reuter',
                     'link': 'https://www.facebook.com/johannes.reuter.739'
-                },
-                {
-                    'icon': 'reddit',
-                    'text': 'curian17',
-                    'link': 'http://www.reddit.com/user/curian17'
                 }
             ]
         },

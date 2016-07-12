@@ -93,7 +93,7 @@ module.exports = function (grunt) {
 			},
             spriteimgs: {
                 files: ["<%= yeoman.app %>/img/{,*/}*.{gif,jpeg,jpg,png,svg,webp}"],
-                tasks: ["sprite", "notify:sprite"]
+                tasks: ["responsive_images", "sprite", "notify:sprite"]
             },
 			livereload: {
 				options: {
@@ -325,6 +325,28 @@ module.exports = function (grunt) {
 			}
 		},
 
+		responsive_images: {
+			projects: {
+				options: {
+					sizes: [{
+						name: 'small',
+						width: 120
+					},{
+						name: 'medium',
+						width: 320
+					},{
+						name: "large",
+						width: 500
+					}]
+				},
+				files: [{
+					expand: true,
+					src: ['app/img/projects/!(*-*).{jpg,gif,png}'],
+					dest: '.'
+				}]
+			}
+		},
+
 		// By default, your `index.html`"s <!-- Usemin block --> will take care of
 		// minification. These next options are pre-configured if you do not wish
 		// to use the Usemin blocks.
@@ -411,13 +433,14 @@ module.exports = function (grunt) {
 
 		grunt.task.run([
 			"clean:server",
-            "sprite",
-            "less",
+			"sprite",
+			"less",
+			"responsive_images",
 			"concurrent:server",
-            "compile-handlebars",
+			"compile-handlebars",
 			"autoprefixer",
 			"connect:livereload",
-            "notify:dev",
+			"notify:dev",
 			"watch"
 		]);
 	});
@@ -445,6 +468,7 @@ module.exports = function (grunt) {
 		"clean",
 		"sprite",
 		"less",
+		"responsive_images",
 		"useminPrepare",
 		"concurrent:dist",
 		"compile-handlebars",
