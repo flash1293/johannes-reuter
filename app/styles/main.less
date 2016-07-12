@@ -85,18 +85,18 @@ h2:after {
     padding-top: 60px;
 
 	.item {
-		margin-bottom: 70px;
+		display: flex;
+		margin-bottom: 20px;
 	}
 
         .caption {
-
+		flex-grow: 1;
             .caption-details {
                 display: inline-block;
                 border-left: 1px solid @borderColor2;
                 margin-left: 10px;
                 font-size: 14px;
                 line-height: 24px;
-                transition: all 0.7s;
                 text-align: left;
 
                 .label {
@@ -114,17 +114,13 @@ h2:after {
             }
         }
 
-	.pull-alternating {
-		float: left;
-	}	
-
 	
 	@media(min-width:767px) {
+		.item {
+			align-items: center;
+			margin-bottom: 70px;
+		}
 	 	.row {
-			.pull-alternating + .caption {
-				padding-top: 40px;
-			}
-
 			.pull-alternating + .caption *, .pull-alternating + .caption  {
 				text-align: center;
 			}
@@ -132,7 +128,7 @@ h2:after {
 
 	        .row:nth-child(even) {
 			.pull-alternating {
-				float: right;
+				order: 2;
 				margin-left: 10px;
 			}	
 
@@ -140,7 +136,6 @@ h2:after {
 
 	       .row:nth-child(odd) {
 			.pull-alternating {
-				float: left;
 				margin-right: 10px;
 			}	
 		}
