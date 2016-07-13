@@ -85,6 +85,10 @@ module.exports = function (grunt) {
 				files: ["test/spec/{,*/}*.js"],
 				tasks: ["test:watch"]
 			},
+            fontello: {
+				files: ["fontello-config.json"],
+				tasks: ["fontello"]
+			},
             hbs: {
 				files: ["<%= yeoman.app %>/{,*/}*.hbs", "<%= yeoman.app %>/{,*/}*.json"],
 				tasks: ["compile-handlebars", "notify:hbs"]
@@ -439,6 +443,7 @@ module.exports = function (grunt) {
 			"clean:server",
 			"sprite",
 			"less",
+			"fontello",
 			"responsive_images",
 			"concurrent:server",
 			"compile-handlebars",
@@ -473,6 +478,7 @@ module.exports = function (grunt) {
 		"sprite",
 		"less",
 		"responsive_images",
+		"fontello",
 		"useminPrepare",
 		"concurrent:dist",
 		"compile-handlebars",
