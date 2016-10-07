@@ -9,12 +9,12 @@
 					<source srcset="/img/projects/{{ imageURL }}-small.png" media="(max-width: 600px)">
 					<source srcset="/img/projects/{{ imageURL }}-medium.png" media="(max-width: 1000px)">
 					<source srcset="/img/projects/{{ imageURL }}-large.png" media="(min-width: 1001px)">
-					<img src="/img/projects/{{ imageURL }}-large.png">
+					<img alt="" src="/img/projects/{{ imageURL }}-large.png">
 				</picture>
 			</div>
 			<div class="media-body caption">
 			    <div class="caption-title">
-				<a class="badgelink" target="_blank" href="http://{{ url }}"><i class="icon-link"></i></a>{{ name }}
+				<a class="badgelink" alt="Link zur Live-Seite" target="_blank" href="http://{{ url }}"><i class="icon-link"></i></a>{{ name }}
 			    </div>
 			    <div class="caption-details">
 				{{{ subtitle }}}<br />
