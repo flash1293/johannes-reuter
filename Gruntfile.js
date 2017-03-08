@@ -490,7 +490,6 @@ module.exports = function (grunt) {
 		"rev",
 		"usemin",
 		"htmlmin",
-		"notify:all"
 	]);
 
     grunt.registerTask("deploy", [
